@@ -20,3 +20,24 @@ function contact(event) {
         alert("Email service is temporarily unavailable. Please contact me directly at suyash.ankam@gmail.com")
     })
 }
+
+let isModalOpen = false;
+let contrast = false;
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal__open");
+    }
+    isModalOpen = true;
+    document.body.classList += " modal__open";
+}
+
+function toggleContrast() {
+    contrast = !contrast;
+    if (contrast) {
+        document.body.classList += " dark__theme";
+    } else {
+        document.body.classList.remove("dark__theme");
+    }
+    
+}
