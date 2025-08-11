@@ -23,6 +23,7 @@ function contact(event) {
 
 let isModalOpen = false;
 let contrast = false;
+const scale = 1/20;
 function toggleModal() {
     if (isModalOpen) {
         isModalOpen = false;
@@ -40,4 +41,16 @@ function toggleContrast() {
         document.body.classList.remove("dark__theme");
     }
     
+}
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape");
+    const x = event.clientX * scale;
+    const y = event.clientY * scale;
+
+    for(let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`;
+    }
 }
