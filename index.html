@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/8e4425673c.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "hZ-idLSVfN7yGhiih",
+            });
+        })();
+    </script>
 </head>
 <body>
     <section id="landing__page">
@@ -36,9 +46,7 @@
                 </li>
                 <li class="nav__link click">
                     <a href="#" class="
-                    nav__link--anchor 
-                    link__hover-effect 
-                    link__hover-effect--black"><i class="fa-solid fa-adjust"></i></a>
+                    nav__link--anchor"><i class="fa-solid fa-adjust"></i></a>
                 </li>
             </ul>
         </nav>
@@ -73,6 +81,82 @@
             <div class="scroll__icon click">
             </div>
         </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about ">
+                    Here's a bit more about me
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--about">
+                    Frontend/Backend Software Engineer
+                </h4>
+
+                <p class="modal__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fuga. Perspiciatis velit facilis magnam vero explicabo iure quaerat porro? Molestiae.</p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/HTML5_Badge.svg.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/javascript-1-225993.png" alt="">
+                        <span class="language__name">JAVASCRIPT</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/typescript-3521774-2945272.png" alt="">
+                        <span class="language__name">TYPESCRIPT</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/react-3-1175109.png" alt="">
+                        <span class="language__name">REACT</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/java_226777.png" alt="">
+                        <span class="language__name">JAVA</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/python_1822899.png" alt="">
+                        <span class="language__name">PYTHON</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/letter-c_10220547.png" alt="">
+                        <span class="language__name">C</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contract">
+                    I'm currently open to new opportunites.
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submission" class="form__submit">Send it!</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to connect!
+                </div>
+            </div>
+            <i class="fa-solid fa-times modal__exit click"></i>
+        </div>
     </section>
     <section id="projects">
         <div class="container">
@@ -118,29 +202,29 @@
                 <div class="footer__social--list">
                     <a href="" class="
                     footer__social--link
-                    link__hover--effect
-                    link__hover--effect--white
+                    link__hover-effect
+                    link__hover-effect--white
                     ">
                         Github
                     </a>
                     <a href="" class="
                     footer__social--link
-                    link__hover--effect
-                    link__hover--effect--white
+                    link__hover-effect
+                    link__hover-effect--white
                     ">
                         Linkedin
                     </a>
                     <a href="" class="
                     footer__social--link
-                    link__hover--effect
-                    link__hover--effect--white
+                    link__hover-effect
+                    link__hover-effect--white
                     ">
                         Email
                     </a>
                     <a href="" class="
                     footer__social--link
-                    link__hover--effect
-                    link__hover--effect--white
+                    link__hover-effect
+                    link__hover-effect--white
                     ">
                         Resume
                     </a>
