@@ -622,6 +622,7 @@ footer {
 
 .shape {
     position: fixed;
+    z-index: -3;
 }
 .shape--0 {
     top: 15vh;
