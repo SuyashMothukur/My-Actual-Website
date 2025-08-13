@@ -251,7 +251,6 @@ nav,
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 .scroll__icon {
@@ -576,7 +575,14 @@ nav {
 
 .project__description--para {
     margin: 16px 0;
+}
 
+.trend {
+    color: rgb(255, 217, 0);
+}
+
+.library {
+    color: #1c1d25;
 }
 
 
@@ -622,7 +628,6 @@ footer {
 
 .shape {
     position: fixed;
-    z-index: -3;
 }
 .shape--0 {
     top: 15vh;
